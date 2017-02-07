@@ -1,7 +1,7 @@
 {
-  "name": "react-tabs",
+  "name": "react-component",
   "version": "0.0.1",
-  "description": "a quick and minimal react project kit",
+  "description": "build a react component",
   "main": "index.js",
   "repository": {
     "type": "git"
@@ -13,9 +13,8 @@
   },
   "keywords": [
     "React",
-    "webpack",
-    "Node",
-    "start project"
+    "Component",
+    "Node"
   ],
   "author": "Betamee",
   "license": "ISC",
