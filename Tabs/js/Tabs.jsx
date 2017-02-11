@@ -1,8 +1,9 @@
 import React, { Component, PropTypes, cloneElement } from 'react';
-import styles from '../css/style.scss';
 import classnames from 'classnames';
 import TabNav from './TabNav';
 import TabContent from './TabContent';
+import styles from '../css/style.scss';
+
 
 class Tabs extends Component {
   static propTypes = {
@@ -43,6 +44,7 @@ class Tabs extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    //这个函数起作用只在activeIndex属性存在时
     if ('activeIndex' in nextProps) {
       this.setState({
         activeIndex: nextProps.activeIndex,

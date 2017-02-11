@@ -12,7 +12,12 @@ class TabPane extends Component {
     isActive: PropTypes.bool,
   };
 
+  componentDidMount () {
+  
+  }
+  
   render() {
+    //注：这里的className其实是没有的，undefined，加在这里其实当TabPane组件添加了className的时候才起作用
     const { classPrefix, className, isActive, children } = this.props;
 
     const classes = classnames({
@@ -20,7 +25,6 @@ class TabPane extends Component {
       [`${classPrefix}-panel`]: true,
       [`${classPrefix}-active`]: isActive,
     });
-
     return (
       <div
         role="tabpanel"

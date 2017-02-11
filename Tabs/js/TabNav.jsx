@@ -23,6 +23,7 @@ class TabNav extends Component {
       });
 
       let events = {};
+      //判断是否禁用
       if (!child.props.disabled) {
         events = {
           onClick: this.props.onTabClick.bind(this, order),
@@ -50,6 +51,10 @@ class TabNav extends Component {
     });
   }
 
+  componentDidMount() {
+    console.log(this.refs.activeTab);
+  }
+  
   render() {
     const { classPrefix } = this.props;
 
