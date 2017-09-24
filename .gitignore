@@ -1,4 +1,9 @@
 node_modules
-.vscode
-.DS_Store
 npm-debug.log
+start.sh
+.avoscloud
+.leancloud
+build/
+# VIM
+*~
+*.swp

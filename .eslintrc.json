@@ -1,0 +1,36 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+        // 缩进为4个空格（默认值）
+        "indent": 2,
+        "no-var": 1,
+        "no-alert": 2,
+        "no-console": 0,
+        "no-unused-vars":"warn",
+        "linebreak-style":[1,"windows"],
+        "global-require":"warn",
+        "no-underscore-dangle":"off",
+        "react/jsx-filename-extension":"off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "import/no-webpack-loader-syntax":"off",
+        "import/no-extraneous-dependencies": "off",
+        "import/first":"off",
+        "import/no-unresolved":0,
+        "import/extensions":0
+
+    }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "ract-components",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ract-components lib",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./dist/server.js ",
+    "dev": "cross-env NODE_ENV=development nodemon ./app/server.js --inspect --exec babel-node",
+    "buildapp": "webpack --config webpack.config.prod.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-css-modules": "^4.7.1",
+    "react-dom": "^15.6.1",
+    "react-transition-group": "^2.2.0",
+    "webpack": "^3.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "express": "4.15.3",
+    "file-loader": "^0.11.2",
+    "flow-bin": "^0.55.0",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.2"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
