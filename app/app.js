@@ -1,21 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './base.css';
 
 // 引入UI库
 import {
   Carousel,
+  EnhanceRippleEffect,
 } from '../src';
 
+
+const Button = (props) => {
+  console.log(props);
+  return (
+    <div
+      style={{
+        width: 500,
+        height: 300,
+        top: 50,
+        left: 50,
+        backgroundColor: 'yellow',
+        overflow: 'hidden',
+        position: 'relative',
+      }}
+      onClick={props.clickToRipple}
+    >{props.ripple}</div>
+  );
+};
+
+const EnhanceBtn = EnhanceRippleEffect(Button);
+
 const App = () => (
-  <Carousel>
-    <Carousel.Item>
-      <img width={900} height={500} alt="900x500" src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"/>
-      <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-  </Carousel>
+  <div
+    style={{
+      width: 1000,
+      height: 1000,
+      overflow: 'hidden',
+      position: 'relative',
+    }}
+  >
+    <EnhanceBtn />
+  </div>
 );
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
