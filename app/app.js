@@ -10,19 +10,20 @@ import {
 
 
 const Button = (props) => {
-  console.log(props);
   return (
     <div
       style={{
         width: 500,
-        height: 300,
-        top: 50,
-        left: 50,
+        height: 500,
+        // top: 50,
+        // left: 50,
         backgroundColor: 'yellow',
         overflow: 'hidden',
         position: 'relative',
       }}
-      onClick={props.clickToRipple}
+      onMouseDown={props.MouseDownToRipple}
+      onMouseUp={props.MouseUpToRipple}
+      onMouseLeave={props.MouseLeaveToRipple}
     >{props.ripple}</div>
   );
 };
@@ -35,7 +36,7 @@ const App = () => (
       width: 1000,
       height: 1000,
       overflow: 'hidden',
-      position: 'relative',
+      // position: 'relative',
     }}
   >
     <EnhanceBtn />
