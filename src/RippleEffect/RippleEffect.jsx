@@ -58,16 +58,7 @@ const EnhanceRippleEffect = WrappedComponent => class extends React.PureComponen
     $rippleNode.setAttribute('class', `ripple-${timekey}`);
     $rippleNode.setAttribute(
       'style',
-      `top: ${rippleTop}px;
-       left: ${rippleLeft}px;
-       width: ${rippleLength}px;
-       height: ${rippleLength}px;
-       position: absolute;
-       background: rgba(0,0,0,0.3);
-       border-radius: 50%;
-       pointer-events: none;
-       z-index: 9999;
-       `,
+      `top: ${rippleTop}px;left: ${rippleLeft}px;width: ${rippleLength}px;height: ${rippleLength}px;position: absolute;background: rgba(0,0,0,0.3);border-radius: 50%;pointer-events: none;z-index: 9999;`,
     );
     // 添加到DOM结构上
     const $rippleWrapper = e.target.querySelector('.ripplewrapper');
