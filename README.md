@@ -46,7 +46,7 @@ EnhanceBtn就是增强后的有RippleEffect的组件，这里的关键是，在�
 #### future improvement: 
 
 - 使用canvas绘制ripple效果
-— 针对移动端优化，添加touch事件
+- 针对移动端优化，添加touch事件
 
 
 ## TODO
