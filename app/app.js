@@ -1,35 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './base.css';
 
 // 引入UI库
 import {
   Carousel,
+  EnhanceRippleEffect,
 } from '../src';
 
+
+const Button = (props) => {
+  return (
+    <div
+      style={{
+        width: 500,
+        height: 500,
+        // top: 50,
+        // left: 50,
+        backgroundColor: 'yellow',
+        overflow: 'hidden',
+        position: 'relative',
+      }}
+      onMouseDown={props.MouseDownToRipple}
+      onMouseUp={props.MouseUpToRipple}
+      onMouseLeave={props.MouseLeaveToRipple}
+    >{props.ripple}</div>
+  );
+};
+
+const EnhanceBtn = EnhanceRippleEffect(Button);
+
 const App = () => (
-  <Carousel>
-    <Carousel.Item>
-      <img width={900} height={500} alt="900x500" src="http://www.fotor.com/images2/features/photo_effects/e_bw.jpg"/>
-      <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item>
-      <img width={900} height={500} alt="900x500" src="http://img02.tooopen.com/images/20160606/tooopen_sy_164390979313.jpg"/>
-      <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-    <Carousel.Item>
-      <img width={900} height={500} alt="900x500" src="https://img6.bdstatic.com/img/image/public/bizhi112.png"/>
-      <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </Carousel.Caption>
-    </Carousel.Item>
-  </Carousel>
+  <div
+    style={{
+      width: 1000,
+      height: 1000,
+      overflow: 'hidden',
+      // position: 'relative',
+    }}
+  >
+    <EnhanceBtn />
+  </div>
 );
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
