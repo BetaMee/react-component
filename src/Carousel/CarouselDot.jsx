@@ -16,13 +16,14 @@ const defaultProps = {
   current: 0,
 };
 
-const CarouselDot = ({ counts, current }) => {
+const CarouselDot = ({ counts, current, handleChlick }) => {
   const dotNodes = [];
   for (let i = 0; i < counts; i++) {
     dotNodes.push(
       <span
         key={`dot${i}`}
         styleName={classNames('dot-default', i === current ? 'dot-active' : '')}
+        onClick={handleChlick}
       />,
     );
   }

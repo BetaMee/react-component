@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 // 样式
 import Styles from './Carousel.css';
-// 动画
-import { Fade } from '../Transitions';
 // 子组件
 import CarouselCaption from './CarouselCaption';
 import CarouselItem from './CarouselItem';
@@ -24,8 +22,10 @@ class Carousel extends React.PureComponent {
       current: 0,
       next: 0,
       counts: 0,
+      target: 'none', // 'left', 'right', 'none' 运动的方向
     };
   }
+
 
   componentWillMount() {
     const { children } = this.props;
@@ -35,9 +35,42 @@ class Carousel extends React.PureComponent {
       next: this.state.current + 1,
       prev: counts - 1,
       counts,
+      target: 'left',
     });
   }
 
+  _play = () => {
+
+  }
+
+  _goToNext = () => {
+    const {
+      current,
+      prev,
+      next,
+      counts,
+    } = this.state;
+
+    let newNext;
+    if (next === counts - 1) {
+      newNext = 0;
+    } else {
+      newNext = next + 1;
+    }
+
+    const newCurrent = next;
+    const newPrev = current;
+    // 更新
+    this.setState({
+      current: newCurrent,
+      prev: newPrev,
+      next: newNext,
+    });
+  }
+
+  _goToPrev = () => {
+
+  }
 
   render() {
     const { children } = this.props;
@@ -59,6 +92,7 @@ class Carousel extends React.PureComponent {
         <CarouselDot
           counts={counts}
           current={current}
+          handleChlick={this._goToNext}
         />
       </div>
     );
